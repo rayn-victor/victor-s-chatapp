@@ -6,15 +6,16 @@ export default {
 
     //js frame work
     template: ` 
-        <li>
-            <p class="new-message">
-                <span>{{ msg.message.name }} says:</span>
-                {{ msg.message.content }}
-            </p>
-        </li>
+        <p class="new-message" :class="{ 'my-message' : matchedID}">
+            <span>{{ msg.message.name }} says:</span>
+            {{ msg.message.content }}
+        </p>
     `,
 
     data: function() {
-        return { message: "Hello from the template!" }; //return statement
+        return { 
+            message: "Hello from the template!",
+            matchedID: this.$parent.socketID == this.msg.id //reaching out to parent main_vm 
+        }; //return statement
     }
 }
