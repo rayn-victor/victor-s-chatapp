@@ -4,14 +4,14 @@ Welcome to the most subtle anonymous chatroom. Text someone almost as if you're 
 
 ### Functionality
 
-Just share the link (https://the-burner-chatroom.herokuapp.com/) on social media on any media platform or to someone in specific and start typing away!
+Just share the link (https://the-burner-chatroom.herokuapp.com/) on social media on any media platform or to someone in specific and start typing away! The app works on all mobile, tablet and desktop devices.
 
 ### Build tools
-• Node
-• Vue
-• Socket
-• NPM
-• SCSS
+- Node
+- Vue
+- Socket
+- NPM
+- SCSS
 
 ### Author
 Rayn Victor
