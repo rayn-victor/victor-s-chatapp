@@ -6,19 +6,26 @@
 	<title>The Burner Chatroom</title>
 	<link rel="stylesheet" href="css/main.css">
 	<script src="https://unpkg.com/vue"></script>
+	<link href="https://fonts.googleapis.com/css?family=Courier+Prime:700&display=swap" rel="stylesheet">
 	<link rel="icon" href="images/favicon.ico" type="image/ico" sizes="16x16">
 </head>
 
 <body>
 	<main id="app">
+		<header>
+			<img src="images/icon-anon.svg" alt="logo" id="logo">
+			<h1>The Burner Chatroom</h1>
+		</header>
 		<section class="form-container">
-			<label for="nickname">Your Nickname (optional)</label>
-			<input v-model="nickname" type="text" id="nickname" class="nickname" placeholder="What is your nickname?">
-
 			<form>
-				<label for="message">Something to say?</label>
-				<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
-				<input @click.prevent="dispatchMessage" type="submit">
+				<label for="nickname">Enter a nickname:</label>
+				<input v-model="nickname" type="text" id="nickname" class="nickname" placeholder="Type a title for yourself.">
+
+				<label for="message">Write a message:</label>
+				<input v-model="message" class="message" type="text" id="textarea" placeholder="Say something (nice) ..." autocomplete="off"></input>
+
+				<input @click.prevent="dispatchMessage" type="image" src="images/icon-send.svg" alt="submit">
+
 			</form>
 		</section>
 
@@ -28,6 +35,9 @@
 				<newmessage v-for="message in messages" :msg="message"></newmessage>
 			</ul>
 		</section>
+
+		<footer></footer>
+
 	</main>
 	<script src="/socket.io/socket.io.js"></script>
 	<script type="module" src="js/main_vm.js"></script>

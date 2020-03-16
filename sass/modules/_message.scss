@@ -1,18 +1,34 @@
 .new-message { 
-    span { font-size: 0.8rem; display: block; margin-bottom: 2px; }
-
-    width: 45%;
+    span { display: block; margin: 0 5px 0 5px; }
+    font-family: monospace;
+    width: 100%;
     padding: 8px 12px;
-    background-color: white; 
     border-radius: 8px;
     margin-bottom: 1rem;
-
+    color: whitesmoke;
     float:left;
     clear: both;
+    display: flex;
 }
 
-.my-message {
-    float: right !important;
-    background-color: #86bf9d;
-    color: white;
+.typingLine {
+    background-color: #fff;
+    width: 2px;
+    height: 17px;
+    animation: blink;
+    animation-duration: 1s;
+    animation-iteration-count: 3;
+    animation-fill-mode: forwards;
 }
+
+@keyframes blink
+{
+    from { filter: opacity(1); }
+    to { filter: opacity(0); }
+
+}
+
+// .my-message {
+//     float: right !important;
+//     color: white;
+// }
