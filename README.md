@@ -1,5 +1,7 @@
 # The Burner Chatroom
 
+![icon-anon](https://user-images.githubusercontent.com/43250423/76783642-a6362180-6788-11ea-96de-6b2d5c142257.jpg)
+
 Welcome to the most subtle anonymous chatroom. Text someone almost as if you're texting through a burner phone. No saving, no history and no personal details. Chat with anyone across the world!
 
 ### Functionality
@@ -16,4 +18,3 @@ Just share the link (https://the-burner-chatroom.herokuapp.com/) on social media
 ### Author
 Rayn Victor
 
-![icon-anon](https://user-images.githubusercontent.com/43250423/76783211-d630f500-6787-11ea-85ef-7ed891952abf.jpg)
