@@ -1,62 +1,82 @@
 /* reset */
 * {
-	margin: 0; padding: 0; box-sizing: border-box;
+	margin: 0; padding: 0;
 }
 
-html, body { height: 100%; }
+html, body { height: 100%; margin: 0 auto; }
 
-body { font: 16px Helvetica, Arial; }
+body { max-width: 1366px; font: 16px 'Courier Prime', monospace, Arial; background-color: rgb(7, 9, 15);}
 
 main { 
 	display: flex;
 	height: 100%;
-	flex-direction: row;
+	flex-direction: column;
+	filter: drop-shadow(10px 20px 10px rgba(0, 0, 0, 0.671));
+	height: 95%;
 }
+
+header { display: flex; margin: 20px; margin-bottom: 10px; }
+
+h1 { font-family: 'Courier Prime', monospace; color: whitesmoke; margin: 20px;}
+
+#logo { width: 30px; height: 30px; background-color: #fff; border-radius: 100%; padding: 10px; margin-top: 10px;}
+
 .form-container, .messages { padding: 20px; }
 .form-container { 
-	flex: 1; 
-	border: 6px solid #bfcfd6;
-	background-color: #e3edf1;
+	background-color: rgb(19, 26, 48);
+}
 
-	label { display: block; margin-bottom: 0.5rem; }
+form {
+	display: flex;
 }
 
 .messages { 
 	flex: 2;
-	background-color: #eee;
-	border: 6px solid #e2e0e0; 
+	background-image: url('/images/bg-messages.jpg');
+	background: cover;
+	-ms-overflow-style: none;
+	overflow: scroll;
+	overflow-x: hidden;
+	height: 100%;
 }
 
-input, textarea { 
-	display: block; 
-	width: 100%;
-	border: 2px solid #bfcfd6;
-	//border-color: #bfcfd6; 
+.messages::-webkit-scrollbar { display: none; }
+
+label {
+	color: white;
+	margin: 5px;
+	margin-right: 15px;
+}
+
+input { 
+	display: block;
+	width: 300px;
 	border-radius: 4px; 
 	font-size: 0.8rem; 
-	padding: 0.4rem; 
-	border-style: solid;
+	border: none;
+	height: 30px;
+	margin-right: 20px;
+	padding-left: 10px;
+	background-color: rgb(7, 9, 15);
+	color: whitesmoke;
+	font-family: monospace;
 }
-
-textarea { height: 135px; }
-
-
 
 form {
 	//background: #000;
 	padding: 3px;
 	margin: 12px auto;
 
-	input[type=submit] { 
-		width: auto; 
-		padding: 10px; 
-		background-color: rgb(75, 200, 17);
-		margin-top: 1rem; 
-		border-radius: 8px;
-		color: white;
-		cursor: pointer;
-		text-transform: uppercase;
-		font-weight: bold;
+	input[type=image] { 
+		height: 45px;
+		width: 50px;
+		transition: .6s;
+		margin-top: -7px;
+		background: none;
+	}
+
+	input[type=image]:hover {
+		transform: scale(.9);
 	}
 }
 
@@ -65,6 +85,11 @@ form {
 
 	li { padding: 5px 10px;	}
 	li:nth-child(odd) { background: #eee; }
+}
+
+footer {
+	background-color: rgb(19, 26, 48);
+	height: 40px;
 }
 
 // imports

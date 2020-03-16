@@ -3,6 +3,8 @@ import ChatMessage from "./modules/ChatMessage.js";
 
 const socket = io();
 
+var objDiv = document.querySelector(".messages");
+objDiv.scrollTop = objDiv.scrollHeight
 
 //the packet is whatever data we sebd through with the connect event
 //from the server
@@ -40,7 +42,7 @@ const vm = new Vue({
             // double pipe means 'or', if there is no first value, then use whatever comes after the double pipe
             socket.emit('chat_message', {
                 content: this.message,
-                name: this.nickname || "SOMEONE"
+                name: this.nickname || "A user"
             })
 
             this.message = ""; // make the msg box blank after hitting submit
