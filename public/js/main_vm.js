@@ -22,7 +22,7 @@ function showDisconnectMessage() {
 //push the message like 'posting'
 function appendMessage(message) {
     vm.messages.push(message);
-} 
+}
 
 const vm = new Vue({
     data: {
@@ -40,7 +40,7 @@ const vm = new Vue({
             // double pipe means 'or', if there is no first value, then use whatever comes after the double pipe
             socket.emit('chat_message', {
                 content: this.message,
-                name: this.nickname || "Anon"
+                name: this.nickname || "SOMEONE"
             })
 
             this.message = ""; // make the msg box blank after hitting submit
